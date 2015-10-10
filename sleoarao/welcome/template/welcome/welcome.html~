@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Welcome</title>
+
+
+    <!-- Bootstrap -->
+    {% load staticfiles %}
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+          <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+          <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+          <!--[if lt IE 9]>
+          <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+	  
+          <link href="{% static 'css/cover.css' %}" rel="stylesheet"> 
+
+     
+  </head>
+
+  <body>
+     <div class="site-wrapper">
+       <div class="site-wrapper-inner">
+         <div class="cover-container" style="background: url('{{ ImageURL }}') center no-repeat; background-size: 100%
+           
+           <div class="masthead clearfix">
+             <div class="inner">
+               <h3 class="masthead-brand">Welcome Page</h3>
+               <nav>
+                 <ul class="nav masthead-nav">
+                   <li class="active"><a href="/index/">Home</a></li>
+                 </ul>
+               </nav>
+             </div>
+           </div>
+
+           <div class="inner cover">
+             <h1 class="cover-heading">{{ WelcomeTitle }}</h1>
+             <p class="lead">{{ WelcomeContent }}</p>
+             <p class="lead">
+               <a href="#" class="btn btn-lg btn-default">Learn more</a>
+             </p>
+
+           </div>
+
+         </div>
+       </div>
+
+     </div>
+
+
+
+						     
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+						          
+
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+							       
+     <script src="{% static 'js/bootstrap.js' %}"></script>
+
+  </body>
+		
+</html>
+
+
+
