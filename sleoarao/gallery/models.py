@@ -2,6 +2,20 @@ from django.db import models
 from .items import fields
 # Create your models here.
 
+
+class Users(models.Model):
+    """
+    Classfy the Gallery by Username.
+    """
+    username = models.CharField(max_length=200)
+
+    class meta:
+        ordering = ['username']
+
+    def __str__(self):
+        return self.name
+
+
 class Item(models.Model):
     name= models.CharField(max_length=250)
     description = models.TextField()
@@ -23,7 +37,7 @@ class Photo(models.Model):
     image = fields.ThumbnailImageField(upload_to='photos')
     caption = models.CharField(max_length=250, blank=True)
 
-    class meta:
+    class Meta:
         ordering = ['title']
 
     def __str__(self):

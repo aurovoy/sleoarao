@@ -20,4 +20,5 @@ from welcome import views as wv
 urlpatterns = [
     url(r'^$', wv.welcome),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^gallery/', include(gallery.urls)),
 ]

@@ -34,6 +34,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
                 (self.field.thumb_width, self.field.thumb_height),
                 Image.ANTIALIAS
         )
+        
         img.save(self.thumb_path, 'JPEG')
 
 
