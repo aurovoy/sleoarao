@@ -17,6 +17,7 @@ class Users(models.Model):
 
 
 class Item(models.Model):
+    username = models.ForeignKey(Users)
     name= models.CharField(max_length=250)
     description = models.TextField()
     timestamp = models.DateField()
