@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'welcome',
+    'gallery',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,5 +115,5 @@ STATIC_URL = '/static/'
 
 
 # MEDIA_ROOT
-MEDIA_ROOT = "/home/s42/www/sleoarao.cn/static/media/"
+MEDIA_ROOT = "/home/s42/www/sleoarao.cn/media/"
 MEDIA_URL = '/media/'

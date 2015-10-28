@@ -19,14 +19,18 @@
           <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	  <![endif]-->
 	  
-          <link href="{% static 'css/cover.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css/cover.css' %}" rel="stylesheet"> 
 
      
   </head>
 
   <body>
      <div class="site-wrapper">
+       {% if ex_imgurl %}
+       <div class="site-wrapper-inner" style="background: url('{{ ex_imgurl }}') center no-repeat; background-size: 100%">
+       {% else %}
        <div class="site-wrapper-inner" style="background: url('{{ ImageURL }}') center no-repeat; background-size: 100%">
+       {% endif %}
          <div class="cover-container" >
            
 
@@ -34,7 +38,7 @@
              <h1 class="cover-heading">{{ WelcomeTitle }}</h1>
              <p class="lead">{{ WelcomeContent }}</p>
              <p class="lead">
-               <a href="#" class="btn btn-lg btn-default">进入首页</a>
+               <a href="/index/" class="btn btn-lg btn-default">我的首页</a>
              </p>
 
            </div>

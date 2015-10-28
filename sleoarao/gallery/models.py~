@@ -10,7 +10,7 @@ class Item(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
     image = fields.ThumbnailImageField(upload_to='items', default='DEFAULT VALUE')
-    img_exurl = models.CharField(max_length=300, blank=True)
+    img_exurl = models.CharField(max_length=300)
 
     class Meta:
         ordering = ['name']
@@ -27,8 +27,8 @@ class Photo(models.Model):
     title = models.CharField(max_length=200)
     image = fields.ThumbnailImageField(upload_to='photos')
     caption = models.CharField(max_length=250, blank=True)
-    
-    img_exurl = models.CharField(max_length=300, blank=True)
+    detail = models.TextField()
+    img_exurl = models.CharField(max_length=300)
 
     class Meta:
         ordering = ['title']

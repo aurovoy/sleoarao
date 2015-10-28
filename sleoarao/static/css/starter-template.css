@@ -1,0 +1,23 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.thumbnail :hover{
+  outline:none;
+}
+
+.thumbnail .caption {
+  text-decoration: none;
+  text-align: center;
+}
+
+.indeximgclass {
+  width: 100%;
+}
+
+.indeximgmask :hover{
+  opacity: 0.8;
+}

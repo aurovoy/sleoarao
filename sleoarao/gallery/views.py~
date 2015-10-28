@@ -8,10 +8,3 @@ def index(request):
 
     context = { 'item':item_data }
     return render(request, 'gallery/index.html', context)
-    
-    
-def itemlist(request):
-    item_data = Item.objects.all()
-
-    context = { 'item':item_data }
-    return render(request, 'gallery/item.html', context)
