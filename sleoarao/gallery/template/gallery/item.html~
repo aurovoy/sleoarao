@@ -59,16 +59,24 @@
       <div class="row">
       {% for i in item %}
         <div class="col-md-3">
-          
-          <a class="thumbnail" href="{{ i.image.url }}">
-            
+         <div class="thumbnail">
+         
+          <a class="imglink" href="{{ i.image.url }}">
            <div class="indeximgmask">
+           {% if i.img_exurl %}
+            <img class="indeximgclass" src="{{ i.img_exurl }}" alt="{{ i.name }}">
+           {% else %}
             <img class="indeximgclass" src="{{ i.image.url }}" alt="{{ i.name }}">
+           {% endif %}
            </div>
+          </a>
+          
            <div class="caption">
              <h4>{{ i.name }}</h4>
            </div>
-          </a>
+           
+         </div><!--/.thumbnail-->
+          
           
         
         
