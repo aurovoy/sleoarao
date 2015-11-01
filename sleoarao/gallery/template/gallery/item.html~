@@ -73,16 +73,16 @@
          <div class="collum">
          <div class="thumbnail">
          
-          <a class="imglink" href="/gallery/items/{{ i.id }}/">
+          <a class="imglink" href="/gallery/items/{{ p.id }}/">
            <div class="indeximgmask">
 
-            <img class="indeximgclass" src="{{ i.imgtrans }}" alt="{{ i.name }}">
+            <img class="indeximgclass" src="{{ p.imgtrans }}" alt="{{ p.name }}">
 
            </div>
           </a>
           
            <div class="caption">
-             <h4>{{ i.name }}</h4>
+             <h4>{{ p.name }}</h4>
            </div>
            
          </div><!--/.thumbnail-->
@@ -93,8 +93,10 @@
        </div><!--/.col-md-9-->
 
        <div class="col-md-2">
-	  <h3>Title</h3>
-          <p>content</p>	  
+         <div class="panel-body">
+	  <h4>SLEOARAO</h4>
+          <p>关于相册的介绍</p>
+         </div>	  
        </div><!--/.col-md-2-->
       </div><!--/.row-->
       </div><!--/.gallery-->
