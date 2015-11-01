@@ -9,7 +9,7 @@ from .items import fields
 class Item(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
-    image = fields.ThumbnailImageField(upload_to='items', default='DEFAULT VALUE')
+    image = fields.ThumbnailImageField(upload_to='items', blank=True)
     img_exurl = models.CharField(max_length=300, blank=True)
 
     class Meta:
@@ -25,7 +25,7 @@ class Item(models.Model):
 class Photo(models.Model):
     item = models.ForeignKey(Item)
     title = models.CharField(max_length=200)
-    image = fields.ThumbnailImageField(upload_to='photos')
+    image = fields.ThumbnailImageField(upload_to='photos', blank=True)
     caption = models.CharField(max_length=250, blank=True)
     
     img_exurl = models.CharField(max_length=300, blank=True)

@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from welcome import views as wv
+from gallery import views as gv
 
 urlpatterns = [
     url(r'^$', wv.welcome),
+    url(r'^index/$', gv.index),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/', include('gallery.urls')),
+    url(r'^gallery/', include('gallery.urls')),
 ]

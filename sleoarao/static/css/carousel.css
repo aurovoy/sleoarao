@@ -95,14 +95,8 @@ body {
 
 /* custom */
 .navbar-inverse {
-	background-color: transparent;
-	border-color: transparent;
+  border-color:transparent;
 }
-
-.navbar-inverse .navbar-nav > .active > a{
-  background-color: transparent;
-}
-
 .bg {
   height:550px;
   background-image: url("http://ww2.sinaimg.cn/large/6d1c2314gw1euwdm4ynxnj210m0ou79m.jpg");
@@ -111,7 +105,7 @@ body {
   opacity: 1;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: 50% 50%;
+  background-position: 50% 45%;
   background-clip: content-box;
   background-origin: padding-box;
   background-size: 105%;

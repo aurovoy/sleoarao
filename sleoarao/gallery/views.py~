@@ -8,3 +8,30 @@ def index(request):
 
     context = { 'item':item_data }
     return render(request, 'gallery/index.html', context)
+    
+    
+def itemlist(request):
+    item_data = Item.objects.all()
+    for i in item_data:
+        
+        if i.img_exurl:
+            i.imgtrans = i.img_exurl
+        else:
+            i.imgtrans= i.image.url
+
+    context = { 'item':item_data }
+    return render(request, 'gallery/item.html', context)
+
+def itemdetail(request, object_id):
+    photos = Photo.objects.filter(
+            item.id = object_id
+            )
+
+    try:
+        item_detail = Item.objects.get(id=object_id)
+    except Item.DoesNotExist:
+        raise Http404("Item does not exist")
+    
+    context = {"item":item_detail, "photos":photos}
+    return render(request, 'gallery/item_detail.html', context)
+

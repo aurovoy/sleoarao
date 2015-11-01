@@ -26,7 +26,11 @@
 
   <body>
      <div class="site-wrapper">
+       {% if ex_imgurl %}
+       <div class="site-wrapper-inner" style="background: url('{{ ex_imgurl }}') center no-repeat; background-size: 100%">
+       {% else %}
        <div class="site-wrapper-inner" style="background: url('{{ ImageURL }}') center no-repeat; background-size: 100%">
+       {% endif %}
          <div class="cover-container" >
            
 

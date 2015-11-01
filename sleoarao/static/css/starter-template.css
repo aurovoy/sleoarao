@@ -5,6 +5,11 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.thumbnail{
+  text-align: center;
+}
+
 .thumbnail :hover{
   outline:none;
 }
@@ -20,4 +25,21 @@ body {
 
 .indeximgmask :hover{
   opacity: 0.8;
+}
+
+.gallery {
+  padding-top:30px;
+}
+
+.innav {
+    margin-bottom: 20px;
+    list-style: outside none none;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    padding: 0px 0px;
+    height:40px;
+}
+
+.panel-body{
+  text-align: center;
 }

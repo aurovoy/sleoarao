@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
+    
+    
 
-    <title>Gallery</title>
+    <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     {% load staticfiles %}
@@ -47,65 +49,49 @@
             <li><a href="/index">Index</a></li>
             <li class="active"><a href="#">Gallery</a></li>
             <li><a href="#about">About</a></li>
-
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <div class="innav">
-      <div class="container">
-      <ol class="breadcrumb">
-        <li><a href="/">Sleoarao</a></li>
-
-        <li class="active">Gallery</li>
-      </ol>
-      </div>
-    </div>
 
     <div class="container">
       <div class="gallery">
+      
       <div class="row">
       
        <div class="col-md-9">
-      {% for i in item %}
-        <div class="col-md-4">
-         {% for p in i %}
-         <div class="collum">
-         <div class="thumbnail">
+      
+
          
-          <a class="imglink" href="/gallery/items/{{ i.id }}/">
+         
+          <a class="imglink" href="{{ photo.imgtrans }}">
            <div class="indeximgmask">
 
-            <img class="indeximgclass" src="{{ i.imgtrans }}" alt="{{ i.name }}">
+            <img class="indeximgclass" src="{{ photo.imgtrans }}" alt="{{ photo.title }}" />
 
            </div>
           </a>
           
-           <div class="caption">
-             <h4>{{ i.name }}</h4>
-           </div>
-           
-         </div><!--/.thumbnail-->
-         </div>
-         {% endfor %}
-        </div><!--/.col-md-3-->
-      {% endfor %}
+
+
+      
        </div><!--/.col-md-9-->
 
        <div class="col-md-2">
-	  <h3>Title</h3>
-          <p>content</p>	  
+         <div id="photoDiscription" class="panel panel-default">
+           <div class="panel-body">
+         
+           <h3>{{ photo.title }}</h3>
+           <p>{{ photo.caption }}</p>
+           </div>
+         </div><!--/.panel-->
+	  
        </div><!--/.col-md-2-->
       </div><!--/.row-->
       </div><!--/.gallery-->
 
 
-      
-      
-      <footer class='bottom'>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>2015 Sleoarao  <a href="#about">About</a> · <a href="#">Terms</a></p>
-      </footer>
+
     </div><!-- /.container -->
 
 
