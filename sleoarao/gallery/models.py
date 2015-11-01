@@ -2,7 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 
 from .items import fields
-
+#coding=utf-8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 # Create your models here.
 
 

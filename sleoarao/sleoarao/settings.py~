@@ -59,7 +59,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             '/home/s42/dev/sleoarao/welcome/template/',
-            '/home/s42/dev/sleoarao/gallery/template/'
+            '/home/s42/dev/sleoarao/gallery/template/',
+            '/home/s42/dev/sleoarao/sleoarao/template/'
             ],
         'APP_DIRS': True,
         'OPTIONS': {

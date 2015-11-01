@@ -6,9 +6,10 @@ from items.imgarray import arr
 
 
 def index(request):
-    item_data = Item.objects.all()[:10]
+    item_data = Item.objects.all()[:3]
+    itempac = imgselect_pac(item_data)
 
-    context = { 'item':item_data }
+    context = { 'item':itempac }
     return render(request, 'gallery/index.html', context)
     
     

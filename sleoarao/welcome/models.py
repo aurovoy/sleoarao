@@ -1,5 +1,8 @@
 from django.db import models
-
+#coding=utf-8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 # Create your models here.
 
 class Welcome(models.Model):
