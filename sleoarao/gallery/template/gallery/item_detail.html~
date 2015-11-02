@@ -46,9 +46,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/index">Index</a></li>
-            <li class="active"><a href="#">Gallery</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="/index">首页</a></li>
+            <li class="active"><a href="#">相册</a></li>
+            <li><a href="#about">关于</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,7 +57,7 @@
       <div class="container">
       <ol class="breadcrumb">
         <li><a href="/">Sleoarao</a></li>
-        <li><a href="/gallery/items">Gallery</a></li>
+        <li><a href="/gallery/items">相册</a></li>
         <li class="active">{{ item.name }}</li>
       </ol>
       </div>
@@ -71,22 +71,25 @@
        <div class="col-md-9">
       {% for i in photos %}
         <div class="col-md-4">
+        {% for p in i %}
+        <div class="collum">
          <div class="thumbnail">
          
-          <a class="imglink" href="{{ i.id }}">
+          <a class="imglink" href="{{ p.id }}">
            <div class="indeximgmask">
 
-            <img class="indeximgclass" src="{{ i.imgtrans }}" alt="{{ i.title }}" />
+            <img class="indeximgclass" src="{{ p.imgtrans }}" alt="{{ p.title }}" />
 
            </div>
           </a>
           
            <div class="caption">
-             <h4>{{ i.title }}</h4>
+             <h4>{{ p.title }}</h4>
            </div>
            
          </div><!--/.thumbnail-->
-          
+         </div>
+         {% endfor %}
           
         
         
