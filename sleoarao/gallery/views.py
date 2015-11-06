@@ -53,3 +53,8 @@ def photodetail(request, item_id, photo_id):
 
     context={"photo":photo_d}
     return render(request, 'gallery/photo_detail.html', context)
+    
+
+def schedule(request):
+    context={}
+    return render(request, 'gallery/schedule.html', context)
